@@ -1,0 +1,96 @@
+/*
+* Color system - Nikon | MyLearning.
+*
+*/
+$white:    #fff;
+$gray-100: #f7f7f7;
+$gray-200: #ececec;
+$gray-300: #bfbfbf;
+$gray-400: #a4a4a4;
+$gray-500: #898989;
+$gray-600: #707070;
+$gray-700: #585858;
+$gray-800: #404040;
+$gray-900: #2a2a2a;
+$black:    #000;
+
+$blue:    #3399CC;
+$indigo:  #0066CC;
+$purple:  #7A6CAC;
+$pink:    #FF8B8C;
+$red:     #ff6e6e;
+$orange:  #FFAD07;
+$yellow:  #FFDD00; // Nikon yellow.
+$green:   #6CCB9C;
+$teal:    #006666;
+$cyan:    #0EE6D7;
+
+$primary:       $yellow;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $blue;
+$warning:       $orange;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-800;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark
+  ),
+  $theme-colors
+);
+
+// Body.
+$body-color:    $black; // Body font.
+$body-bg:       $white; // Body background.
+
+// Links.
+$link-decoration: none;
+
+// Fonts.
+$font-family-system: -apple-system, BlinkMacSystemFont, Helvetica, Arial, Lucida, sans-serif;
+$opensans-font-family: "Open Sans", $font-family-system;
+
+// Font sizes.
+$font-size-base: 1rem; // 16px.
+
+$h1-font-size: $font-size-base * 3.0625; // 49px
+$h2-font-size: $font-size-base * 2.5; // 40px
+$h3-font-size: $font-size-base * 1.875; // 30px
+$h4-font-size: $font-size-base * 1.5; // 24px
+$h5-font-size: $font-size-base * 1.25; // 20px
+$h6-font-size: $font-size-base * 1.0;
+
+// Headings.
+$headings-color: $black;
+$headings-font-weight: 300;
+$headings-font-family: $opensans-font-family;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1400px
+) !default;
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 776px,
+  // Large screen / desktop
+  lg: 1003px,
+  // Extra large screen / wide desktop
+  xl: 1213px
+);

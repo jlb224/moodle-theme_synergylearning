@@ -1,0 +1,42 @@
+#page.drawers {
+    padding: 0;
+
+    #topofscroll.main-inner {
+        padding: 1.5rem 3rem;
+    }
+}
+
+#footer {
+    background-color: $gray-200;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 25px;
+    width: 100%;
+
+    .font-small {
+        font-size: .75rem;
+    }
+
+    #page-footer {
+        background-color: $gray-200;
+        font-size: 16px;
+        margin: auto;
+        max-width: 1140px;
+
+        .logo {
+            max-height: 100px;
+            margin: 20px;
+            margin-left: 0;
+        }
+
+        ul.policies a {
+            margin-top: 2rem;
+            text-decoration: underline;
+        }
+
+        .fa.fa-phone {
+            font-size: 12.58px;
+            margin-right: 3px;
+        }
+    }
+}

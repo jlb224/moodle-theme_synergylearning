@@ -1,0 +1,97 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_synergylearning/footer
+
+    Footer template
+
+    Example context (json): {}
+}}
+
+<footer id="footer">
+    <div id="page-footer">
+        <div class="footer-columns">
+            <div class="row">
+                <div class="col-md-4 column-left font-small">
+                    {{#footerlogo }}
+                        <img src="{{footerlogo}}" class="logo mr-1" alt="{{sitename}}">
+                    {{/footerlogo }}
+                    {{^footerlogo }}
+                        <img src="{{output.get_compact_logo_url}}" class="logo mr-1" alt="{{sitename}}">
+                    {{/footerlogo }}
+                    <address>
+                        <strong>Nikon Optical Ltd<br>
+                        3 Tanners Drive<br>
+                        Blakelands<br>
+                        Milton Keynes, Bucks MK14 5BU<br>
+                        United-Kingdom</strong><br>
+                    </address>
+                    <ul class="list-unstyled policies">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#myModal">
+                            Cookies settings</a>
+                        </li>
+                        <!-- Button to Open the Modal -->
+                    </ul>
+                    <!-- The Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="myModalLabel">Privacy Overview</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <p>This website uses cookies to improve your experience while you navigate through the website. Out of these cookies, the cookies that are categorized as necessary are stored on your browser as they are essential for the working of basic functionalities of the website. We also use third-party cookies that help us analyze and understand how you use this website. These cookies will be stored in your browser only with your consent. You also have the option to opt-out of these cookies. But opting out of some of these cookies may have an effect on your browsing experience.</p>
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 column-center"></div>
+                <div class="col-md-4 column-right">
+                <ul class="list-unstyled">
+                    <li>{{{ output.standard_footer_html }}}</li>
+                    <li>
+                        <div class="footer-content-debugging footer-dark bg-dark text-light">
+                            <div class="container-fluid footer-dark-inner">
+                                {{{ output.debug_footer_html }}}
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        <p class="font-small">{{{copyright}}}</p>
+    </div>
+    {{{ output.standard_end_of_body_html }}}
+</footer>
+
+{{#js}}
+    require(['theme_boost/footer-popover'], function(FooterPopover) {
+        FooterPopover.init();
+    });
+{{/js}}
